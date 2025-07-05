@@ -36,15 +36,12 @@ To build a searchable, client-side website that indexes the content from:
 * Node.js script crawls all pages within the domain `https://www.ramakrishnavivekananda.info`
 * Follows internal links only
 * Downloads HTML content to a `site-download/` folder
-* Uses concurrency with `Promise.all` and worker threads
-* Adds `.html` extension for consistent filenames
-* Renames any `.htm.html` → `.htm` via bash script
+* Uses network-read concurrency with `Promise.all` and disk-write parallelism with worker threads
 
 ### Step 2: Indexing
 
 * Pagefind CLI runs on `site-download/` to build a static full-text inverted index
-* Output placed in `/public/_pagefind`
-* Supports English text content only
+* Output placed in `/public/pagefind`
 
 ### Step 3: UI
 
@@ -54,12 +51,10 @@ To build a searchable, client-side website that indexes the content from:
   * Pagefind search bar
   * Scroll-to-top button
   * All results open in new tab
-  * SVG icon for external links
 
 ### Step 4: Hosting
 
-* GitHub Actions deploys to `gh-pages` branch
-* `index.html`, `pagefind/`, and `public/_pagefind` are uploaded
+* `public` folder is uploaded
 * Extension support plan canceled due to Chrome Web Store size limits
 
 ---
@@ -77,11 +72,9 @@ Pagefind uses a browser-friendly **compressed inverted index** built during pre-
 
 ## 🚀 GitHub Actions Workflow
 
-A `.github/workflows/deploy.yml` handles:
+A `.github/workflows/static.yml` handles:
 
-* Installing Node.js & dependencies
-* Copying pre-generated `pagefind/` output
-* Deploying `index.html`, `pagefind/`, and `public/` to `gh-pages`
+* Deploying `public/` to `gh-pages`
 * Supports preview deployments for PRs (if needed)
 
 ---
