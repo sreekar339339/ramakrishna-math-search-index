@@ -8,7 +8,7 @@
     <script src="/pagefind/pagefind-ui.js"></script>
     <style>
       :root {
-        --pagefind-ui-scale: 1;
+        --pagefind-ui-scale: 1.1;
         --primary-color: #3f51b5;
         --bg-color: #f5f7fa;
         --text-color: #222;
@@ -85,6 +85,10 @@
         box-shadow: 0 4px 16px var(--card-shadow);
       }
 
+      .pagefind-ui__result-inner {
+        margin-top: 0 !important;
+      }
+
       .pagefind-ui__result-inner a {
         text-decoration: underline !important;
         background: none;
@@ -102,7 +106,7 @@
       }
 
       .pagefind-ui__result {
-        padding: calc(30px * var(--pagefind-ui-scale)) 0 calc(30px * var(--pagefind-ui-scale)) !important;
+        padding: calc(25px * var(--pagefind-ui-scale)) 0 calc(25px * var(--pagefind-ui-scale)) !important;
         border-bottom: 1px solid #ddd;
       }
 
