@@ -136,12 +136,14 @@
       }
 
       .pagefind-ui__result-link {
-        position: relative !important;
         padding-right: 1.5em !important;
         text-decoration: underline !important;
       }
+      .pagefind-ui__result-title {
+        position: relative !important;
+      }
 
-      #overlay-list a::after, #inline-publications a::after, .pagefind-ui__result-link::after {
+      #overlay-list a::after, #inline-publications a::after, .pagefind-ui__result-title::after {
         content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 24 24'><path d='M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z'/><path d='M5 5h7V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7H5V5z'/></svg>");
         position: absolute;
         right: 0em;
