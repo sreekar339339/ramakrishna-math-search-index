@@ -7,6 +7,9 @@
     <link href="./pagefind/pagefind-ui.css" rel="stylesheet" />
     <script src="./pagefind/pagefind-ui.js"></script>
     <style>
+      *, ::before, ::after {
+        box-sizing: border-box;
+      }
       :root {
         --pagefind-ui-scale: 1.1;
         --primary-color: #3f51b5;
@@ -45,11 +48,12 @@
 
       #publication-overlay {
         display: none;
+        flex-direction: column;
         position: fixed;
         top: 0;
         left: 0;
-        right: 0;
-        bottom: 0;
+        width: 100vw;
+        height: 100dvh;
         background: rgba(0, 0, 0, 0.6);
         z-index: 1000;
         justify-content: center;
@@ -61,7 +65,7 @@
         padding: 2rem;
         border-radius: 10px;
         max-width: 90%;
-        max-height: 80vh;
+        max-height: 80%;
         overflow-y: auto;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       }
@@ -70,11 +74,10 @@
         background: none;
         border: none;
         font-size: 1.5rem;
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
         cursor: pointer;
         color: white;
+        align-self: flex-end;
+        margin-right: 1rem;
       }
 
       #open-overlay {
@@ -135,7 +138,7 @@
       #overlay-list a::after, #inline-publications a::after {
         content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 24 24'><path d='M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z'/><path d='M5 5h7V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7H5V5z'/></svg>");
         position: absolute;
-        right: 0.5em;
+        right: 0em;
         top: 50%;
         transform: translateY(-50%);
         width: 1em;
