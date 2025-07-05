@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vivekananda Search</title>
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <style>
+      :root {
+        --pagefind-ui-scale: 1;
+        --primary-color: #3f51b5;
+        --bg-color: #f5f7fa;
+        --text-color: #222;
+        --card-bg: #fff;
+        --card-shadow: rgba(0, 0, 0, 0.1);
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        margin: 0;
+        padding: 0 1rem;
+        line-height: 1.6;
+      }
+
+      #intro {
+        margin: 2rem auto;
+        text-align: center;
+      }
+
+      #intro h1 {
+        font-size: 2rem;
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+      }
+
+			#intro h2 {
+				text-decoration: underline;
+			}
+
+      #intro p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+      }
+
+      #intro ol {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        list-style: none;
+        padding: 0;
+        margin: 0 auto 3rem;
+      }
+
+      #intro li {
+        flex: 0 1 auto;
+      }
+
+      #intro a {
+        color: inherit;
+      }
+
+      #intro h2 {
+        font-size: 1rem;
+        background: var(--card-bg);
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px var(--card-shadow);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        white-space: nowrap;
+        margin: 0;
+        display: inline-block;
+				background: none;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 24 24'><path d='M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z'/><path d='M5 5h7V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7H5V5z'/></svg>");
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: 1em;
+      }
+
+      #intro h2:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 16px var(--card-shadow);
+      }
+
+      .pagefind-ui__result-inner a {
+        text-decoration: underline !important;
+        background: none;
+        padding-right: 1.2em;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 24 24'><path d='M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z'/><path d='M5 5h7V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7H5V5z'/></svg>");
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: 1em;
+        color: var(--primary-color);
+      }
+
+      .pagefind-ui__message {
+        justify-content: center;
+        padding-top: 0 !important;
+      }
+
+      .pagefind-ui__result {
+        padding: calc(30px * var(--pagefind-ui-scale)) 0 calc(30px * var(--pagefind-ui-scale)) !important;
+        border-bottom: 1px solid #ddd;
+      }
+
+			.pagefind-ui__drawer {
+				margin-bottom: 2rem;
+			}
+
+      #search {
+        max-width: 960px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="intro">
+      <h1>(Un-official) Search index of the online published works from Ramakrishna Math</h1>
+      <p>Type any word to view all the pages it is found within the below mentioned publications found online</p>
+      <ol>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://www.ramakrishnavivekananda.info/sriramakrishna_thegreatmaster/srk_tgm_content.htm"><h2>Sri Ramakrishna the Great Master</h2></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://www.ramakrishnavivekananda.info/gospel/gospel.htm"><h2>The Gospel of Sri Ramakrishna (1944)</h2></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://www.ramakrishnavivekananda.info/parables/1.htm"><h2>Parables of Sri Ramakrishna</h2></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://www.ramakrishnavivekananda.info/vivekananda/complete_works.htm"><h2>Complete Works of Swami Vivekananda</h2></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://www.ramakrishnavivekananda.info/ghm_book/index.htm"><h2>The Gospel of the Holy Mother</h2></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://www.ramakrishnavivekananda.info/vivekananda_biography/vivekananda_biography.htm"><h2>Vivekananda: A Biography (1953)</h2></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://www.ramakrishnavivekananda.info/swamieastwest/ew_sv_contents.html"><h2>Swami Vivekananda by Eastern & Western Disciples</h2></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://www.ramakrishnavivekananda.info/reminiscences/reminiscences_of_sv.htm"><h2>Reminiscences of Swami Vivekananda</h2></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://www.ramakrishnavivekananda.info/anecdotesweb/stories.html"><h2>Anecdotes of Swami Vivekananda</h2></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://www.ramakrishnavivekananda.info/sisternivedita1910/master_as_i_saw_content.htm"><h2>The Master as I Saw Him (1910)</h2></a></li>
+      </ol>
+    </div>
+    <div id="search"></div>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const searchEl = document.getElementById("search");
+        const observer = new MutationObserver(() => {
+          searchEl.querySelectorAll("a").forEach((link) => {
+            link.setAttribute("target", "_blank");
+            link.setAttribute("rel", "noopener noreferrer");
+          });
+        });
+        observer.observe(searchEl, { childList: true, subtree: true });
+        new PagefindUI({
+          element: "#search",
+          highlightParam: "highlight",
+          showImages: false,
+          baseUrl: "https://www.ramakrishnavivekananda.info",
+          pageSize: 15,
+          processResult: function (result) {
+            result.url = result.url.replace(".htm.html", ".htm");
+            return result;
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
