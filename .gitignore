@@ -1,0 +1,7 @@
+node_modules/
+site-download/
+.pagefind/
+public/.pagefind/
+public/index.html
+.env
+.DS_Store
