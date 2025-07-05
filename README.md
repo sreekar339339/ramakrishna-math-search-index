@@ -1,6 +1,6 @@
 # 📚 Vivekananda Search
 
-An unofficial, full-text search index for online publications of Sri Ramakrishna, Sri Sarada Devi, and Swami Vivekananda — powered by open-source crawling and indexing tools, and hosted freely via GitHub Pages.
+An unofficial, full-text search index for the 3500+ Web-pages published by RamaKrishna Math. — powered by open-source crawling and indexing tools, and hosted freely via GitHub Pages.
 
 ---
 
